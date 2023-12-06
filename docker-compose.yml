@@ -1,0 +1,14 @@
+services:
+
+  postgres:
+    image: postgres
+    ports:
+      - 5408:5432
+    environment:
+      POSTGRES_USER: dater
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - postgres-online-shop-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-online-shop-data:
